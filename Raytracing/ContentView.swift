@@ -6,14 +6,23 @@
 //
 
 import SwiftUI
+import Engine
 
 struct ContentView: View {
+    
+    private func setupImage() -> UIImage? {
+        var bitmap = Bitmap(width: UIScreen.screenWidth, height: UIScreen.screenHeight, color: .white)
+        for x in 0...200 {
+            for y in 0...200 {
+                bitmap[x,y] = .blue
+            }
+        }
+        return UIImage(bitmap: bitmap)
+    }
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Image(uiImage: setupImage()!)
         }
         .padding()
     }
