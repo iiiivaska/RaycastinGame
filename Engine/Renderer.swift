@@ -17,8 +17,8 @@ public struct Renderer {
 
 public extension Renderer {
     mutating func draw() {
-        for x in 0...200 {
-            for y in 0...200 {
+        for x in 0...bitmap.width / 10 {
+            for y in 0...bitmap.height / 10 {
                 bitmap[x,y] = Engine.Color.blue
             }
         }

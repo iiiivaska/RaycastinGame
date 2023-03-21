@@ -7,25 +7,32 @@
 
 import SwiftUI
 import Engine
+import DisplayLink
 
 struct ContentView: View {
+    
+    @State var bitmap: Bitmap = Bitmap(width: 10, height: 10, color: .clear)
     
     var body: some View {
         GeometryReader{ geometry in
             ZStack {
-                draw(width: Int(geometry.size.width), height: Int(geometry.size.height))
+                Image(bitmap: bitmap)?.onFrame{ frame in
+                    draw(width: Int(geometry.size.width), height: Int(geometry.size.height))
+                }
+            }.ifOS(.iOS){
+                $0.edgesIgnoringSafeArea(.all)
             }
         }
     }
 }
 
 extension ContentView {
-    private func draw(width: Int, height: Int) -> Image? {
+    private func draw(width: Int, height: Int) {
         var renderer = Renderer(width: width, height: height)
         
         renderer.draw()
         
-        return Image(bitmap: renderer.bitmap)
+        bitmap = renderer.bitmap
     }
 }
 

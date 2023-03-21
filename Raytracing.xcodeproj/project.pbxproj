@@ -20,6 +20,8 @@
 		A864DCE629C8F3BC00EBC94B /* Bitmap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A864DCE529C8F3BC00EBC94B /* Bitmap.swift */; };
 		A864DCE929C8F51400EBC94B /* UIImage+Bitmap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A864DCE829C8F51400EBC94B /* UIImage+Bitmap.swift */; };
 		A864DCED29CA38C200EBC94B /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A864DCEC29CA38C200EBC94B /* Renderer.swift */; };
+		A864DCF629CA4A0500EBC94B /* DisplayLink in Frameworks */ = {isa = PBXBuildFile; productRef = A864DCF529CA4A0500EBC94B /* DisplayLink */; };
+		A864DCFC29CA501100EBC94B /* View+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A864DCFB29CA501100EBC94B /* View+Additions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,7 @@
 		A864DCE529C8F3BC00EBC94B /* Bitmap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bitmap.swift; sourceTree = "<group>"; };
 		A864DCE829C8F51400EBC94B /* UIImage+Bitmap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Bitmap.swift"; sourceTree = "<group>"; };
 		A864DCEC29CA38C200EBC94B /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+		A864DCFB29CA501100EBC94B /* View+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Additions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A864DCD929C8F17100EBC94B /* Engine.framework in Frameworks */,
+				A864DCF629CA4A0500EBC94B /* DisplayLink in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				A864DCE829C8F51400EBC94B /* UIImage+Bitmap.swift */,
+				A864DCFB29CA501100EBC94B /* View+Additions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -208,6 +213,9 @@
 				A864DCD829C8F17100EBC94B /* PBXTargetDependency */,
 			);
 			name = Raytracing;
+			packageProductDependencies = (
+				A864DCF529CA4A0500EBC94B /* DisplayLink */,
+			);
 			productName = Raytracing;
 			productReference = A864DC9D29C78DD400EBC94B /* Raytracing.app */;
 			productType = "com.apple.product-type.application";
@@ -280,6 +288,9 @@
 				Base,
 			);
 			mainGroup = A864DC9429C78DD400EBC94B;
+			packageReferences = (
+				A864DCF429CA4A0500EBC94B /* XCRemoteSwiftPackageReference "DisplayLink" */,
+			);
 			productRefGroup = A864DC9E29C78DD400EBC94B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -322,6 +333,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A864DCFC29CA501100EBC94B /* View+Additions.swift in Sources */,
 				A864DCA329C78DD400EBC94B /* ContentView.swift in Sources */,
 				A864DCA129C78DD400EBC94B /* RaytracingApp.swift in Sources */,
 				A864DCE929C8F51400EBC94B /* UIImage+Bitmap.swift in Sources */,
@@ -715,6 +727,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A864DCF429CA4A0500EBC94B /* XCRemoteSwiftPackageReference "DisplayLink" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/timdonnelly/DisplayLink";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A864DCF529CA4A0500EBC94B /* DisplayLink */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A864DCF429CA4A0500EBC94B /* XCRemoteSwiftPackageReference "DisplayLink" */;
+			productName = DisplayLink;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A864DC9529C78DD400EBC94B /* Project object */;
 }

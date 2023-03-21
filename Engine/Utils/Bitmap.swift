@@ -12,7 +12,7 @@ public struct Bitmap {
     public let width: Int
     
     public init(width: Int, pixels: [Color]) {
-        self.width = width
+        self.width = width == 0 ? 1 : width
         self.pixels = pixels
     }
 }
@@ -29,6 +29,6 @@ public extension Bitmap {
     
     init(width: Int, height: Int, color: Color) {
         self.pixels = Array(repeating: color, count: width * height)
-        self.width = width
+        self.width = width == 0 ? 1 : width
     }
 }
