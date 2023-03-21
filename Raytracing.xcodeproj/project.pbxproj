@@ -19,7 +19,6 @@
 		A864DCE429C8F32A00EBC94B /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = A864DCE329C8F32A00EBC94B /* Color.swift */; };
 		A864DCE629C8F3BC00EBC94B /* Bitmap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A864DCE529C8F3BC00EBC94B /* Bitmap.swift */; };
 		A864DCE929C8F51400EBC94B /* UIImage+Bitmap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A864DCE829C8F51400EBC94B /* UIImage+Bitmap.swift */; };
-		A864DCEB29C8FA0600EBC94B /* UIScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A864DCEA29C8FA0600EBC94B /* UIScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,7 +73,6 @@
 		A864DCE329C8F32A00EBC94B /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		A864DCE529C8F3BC00EBC94B /* Bitmap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bitmap.swift; sourceTree = "<group>"; };
 		A864DCE829C8F51400EBC94B /* UIImage+Bitmap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Bitmap.swift"; sourceTree = "<group>"; };
-		A864DCEA29C8FA0600EBC94B /* UIScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,7 +173,6 @@
 			isa = PBXGroup;
 			children = (
 				A864DCE829C8F51400EBC94B /* UIImage+Bitmap.swift */,
-				A864DCEA29C8FA0600EBC94B /* UIScreen.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -325,7 +322,6 @@
 				A864DCA329C78DD400EBC94B /* ContentView.swift in Sources */,
 				A864DCA129C78DD400EBC94B /* RaytracingApp.swift in Sources */,
 				A864DCE929C8F51400EBC94B /* UIImage+Bitmap.swift in Sources */,
-				A864DCEB29C8FA0600EBC94B /* UIScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,21 +10,22 @@ import Engine
 
 struct ContentView: View {
     
-    private func setupImage() -> UIImage? {
-        var bitmap = Bitmap(width: UIScreen.screenWidth, height: UIScreen.screenHeight, color: .white)
+    private func setupImage(width: Int, height: Int) -> Image? {
+        var bitmap = Bitmap(width: width, height: height, color: .white)
         for x in 0...200 {
             for y in 0...200 {
-                bitmap[x,y] = .blue
+                bitmap[x,y] = Engine.Color.blue
             }
         }
-        return UIImage(bitmap: bitmap)
+        return Image(bitmap: bitmap)
     }
     
     var body: some View {
-        VStack {
-            Image(uiImage: setupImage()!)
+        GeometryReader{ geometry in
+            ZStack {
+                setupImage(width: Int(geometry.size.width), height: Int(geometry.size.height))
+            }
         }
-        .padding()
     }
 }
 
