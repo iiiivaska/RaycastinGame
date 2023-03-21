@@ -10,22 +10,22 @@ import Engine
 
 struct ContentView: View {
     
-    private func setupImage(width: Int, height: Int) -> Image? {
-        var bitmap = Bitmap(width: width, height: height, color: .white)
-        for x in 0...200 {
-            for y in 0...200 {
-                bitmap[x,y] = Engine.Color.blue
-            }
-        }
-        return Image(bitmap: bitmap)
-    }
-    
     var body: some View {
         GeometryReader{ geometry in
             ZStack {
-                setupImage(width: Int(geometry.size.width), height: Int(geometry.size.height))
+                draw(width: Int(geometry.size.width), height: Int(geometry.size.height))
             }
         }
+    }
+}
+
+extension ContentView {
+    private func draw(width: Int, height: Int) -> Image? {
+        var renderer = Renderer(width: width, height: height)
+        
+        renderer.draw()
+        
+        return Image(bitmap: renderer.bitmap)
     }
 }
 

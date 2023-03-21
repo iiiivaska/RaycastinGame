@@ -19,6 +19,7 @@
 		A864DCE429C8F32A00EBC94B /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = A864DCE329C8F32A00EBC94B /* Color.swift */; };
 		A864DCE629C8F3BC00EBC94B /* Bitmap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A864DCE529C8F3BC00EBC94B /* Bitmap.swift */; };
 		A864DCE929C8F51400EBC94B /* UIImage+Bitmap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A864DCE829C8F51400EBC94B /* UIImage+Bitmap.swift */; };
+		A864DCED29CA38C200EBC94B /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A864DCEC29CA38C200EBC94B /* Renderer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		A864DCE329C8F32A00EBC94B /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		A864DCE529C8F3BC00EBC94B /* Bitmap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bitmap.swift; sourceTree = "<group>"; };
 		A864DCE829C8F51400EBC94B /* UIImage+Bitmap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Bitmap.swift"; sourceTree = "<group>"; };
+		A864DCEC29CA38C200EBC94B /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 		A864DCC529C8F17100EBC94B /* Engine */ = {
 			isa = PBXGroup;
 			children = (
+				A864DCEC29CA38C200EBC94B /* Renderer.swift */,
 				A864DCE229C8F31100EBC94B /* Utils */,
 				A864DCC729C8F17100EBC94B /* Engine.docc */,
 			);
@@ -329,6 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A864DCED29CA38C200EBC94B /* Renderer.swift in Sources */,
 				A864DCC829C8F17100EBC94B /* Engine.docc in Sources */,
 				A864DCE629C8F3BC00EBC94B /* Bitmap.swift in Sources */,
 				A864DCE429C8F32A00EBC94B /* Color.swift in Sources */,
